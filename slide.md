@@ -17,7 +17,7 @@ I'm Kamo
 
 - エンジニア歴：1年7ヵ月
 
-- 業務：[ ‘PHP’, ’Javascript’, ’CSS’, ’jQuery’, ’Linux’ ]
+- 業務：[ ‘PHP’, ’JavaScript’, ’CSS’, ’jQuery’, ’Linux’ ]
  - 不動産業者間のコミュニケーションツールの保守開発
 
 - 個人：[ ‘PHP’, ‘Vue’, ’React’, ’SCSS’, ’Shell’ ]
