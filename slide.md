@@ -11,6 +11,8 @@ Who Am I?
 
 I'm Kamo
 
+<p class="fragment fade-up">@camomile_cafe</p>
+
 >>>
 
 - 名前：カモ（本名：イドンホン）
@@ -43,6 +45,20 @@ I'm Kamo
 
 >>>
 
+<h2><font color="Gold">触れる</font>内容</h2>
+<p class="fragment fade-up"><font color="Gold">個人使用</font>目的のスクレイピングの話</p>
+<p class="fragment fade-up"><font color="Gold">技術・手法選定</font>の理由</p>
+<p class="fragment fade-up">スクレイピングしたときの<font color="Gold">経験談</font></p>
+
+>>>
+
+<h2><font color="Pink">触れない</font>内容</h2>
+<p class="fragment fade-up">コードの<font color="Pink">細かな話</font></p>
+<p class="fragment fade-up"><font color="Pink">法律のケースバイスタディ</font></p>
+<p class="fragment fade-up"><font color="Pink">ビジネス使用</font>目的のスクレイピングの話</p>
+
+>>>
+
 - なぜスクレイピングするのか
 - どんな技術でスクレイピングするのか
 - スクレイピングをする際の注意事項
@@ -63,7 +79,7 @@ I'm Kamo
 
 >>>
 
-### クローリングからスクレイピングまで
+<h3><font color="Gold">クローリング</font>から<font color="Gold">スクレイピング</font>まで</h3>
 ### PHPでした話
 
 ---
@@ -88,17 +104,17 @@ I'm Kamo
 <img src="./asset/computer_net_osoi.png" class="fragment fade-up">
 <img src="./asset/computer_internet_disconnected.png" class="fragment fade-up">
 
-<p class="fragment fade-up">うちは繋がってない…</p>
+<p class="fragment fade-up">うちは<font color="Pink">繋がってない...</font></p>
 
 >>>
 
 ![仕事では](./asset/shigoto_man_casual.png "集中するねん")
-<p class="fragment fade-up">お仕事中に集中</p>
+<p class="fragment fade-up"><font color="Gold">お仕事に集中</font></p>
 
 >>>
 
 ![毎日の更新は](./asset/pop_koushin.png "更新チェックするねん")
-<p class="fragment fade-up">更新のタイミングで情報を見たい</p>
+<p class="fragment fade-up"><font color="Gold">更新</font>のタイミングで情報を見たい</p>
 
 >>>
 
@@ -119,7 +135,7 @@ I'm Kamo
 >>>
 
 ![難しそうな](./asset/kaisya_komaru_man.png "考え込むような")
-<p class="fragment fade-up">難しそう</p>
+<p class="fragment fade-up"><font color="Pink">難しそう</font></p>
 
 >>>
 
@@ -136,27 +152,27 @@ I'm Kamo
 ![PHP](./asset/480px-PHP-logo.svg.png "PHP")
 <p class="fragment fade-up">さっと作れる</p>
 <p class="fragment fade-up">コマンドラインで「php ファイル名」を打つだけ</p>
-<span class="fragment fade-in">
-	<span class="fragment highlight-green">発表者がよく使う</span>
-</span>
+<p class="fragment fade-in"><font color="Gold">発表者がよく使う</font></p>
 
 >>>
 
 ![ライブラリ](./asset/book.png "ライブラリ")
 <p class="fragment fade-up">Simple HTML DOM Parser</p>
 <p class="fragment fade-up">Goutte</p>
-<span class="fragment fade-in">
-	<span class="fragment highlight-green">phpQuery</span>
-</span>
+<p class="fragment fade-in"><font color="Gold">phpQuery</font></p>
+
+>>>
+
+## phpQueryを使う理由
+- <p class="fragment fade-up">導入敷居の低さ</p>
+- <p class="fragment fade-up">使用メモリの効率</p>
 
 >>>
 
 ![cron](./asset/cronjob.png "cron")
 <p class="fragment fade-up">決まった時間に実行したい</p>
 <p class="fragment fade-up">定時実行のスケジュール管理ができる</p>
-<span class="fragment fade-in">
-	<span class="fragment highlight-green">エンジニアっぽい（？）書き方がしたかったから</span>
-</span>
+<p class="fragment fade-in"><font color="Gold">エンジニアっぽい（？）書き方がしたかったから</font></p>
 
 ---
 
@@ -257,7 +273,7 @@ I'm Kamo
 
 <!--ここまではクローリングの定義とその使用できる範囲について話しました-->
 
->>>
+---
 
 ## 基本的なお作法
 ## (クローリング)
@@ -270,14 +286,23 @@ I'm Kamo
 
 <!--まず、サイト内でクローリングする際は自分が誰なのか明かす習慣をつけましょう-->
 
+<img src="./asset/chart_man_cry.png" class="fragment fade-in">
+<img src="./asset/dame_man.png" class="fragment fade-in">
+
+<p class="fragment fade-up">サービス提供面で出る支障を防ぐ</p>
+
 <!--基本的に「持ってくるだけだったらUAを指定しなくてもOK」とか「クロームのクローラを使えばいい」という考え方をもっている方がいるかも知れません。-->
 <!--確かに持ってくるだけならそれでもいいでしょう-->
-<!--ただ、サービス運用をしている側からしたらPVの指標にノイズが出たり、攻撃を受けていると判断したりする恐れがあります-->
+<!--ただ、サービス運用をしている側からしたらPVの指標にノイズが出たり、不明なユーザーによるクローリングは情報が抜かれていると判断したりする恐れがあります-->
 <!--他にもサービスが想定しているユーザーに向けたページビューや体裁が送れないとか-->
 <!--人間のユーザによる閲覧数の集計を取りたいのにアクセス解析の精度が落ちるとかの問題にも繋がります-->
 
-<!--なので、「サービスを運営する側にやさしい」クローリングをする場合、自身の正しいUserAgentを指定し、かつメールや連絡先なども添えておくことをおすすめします。-->
+<!--なので、「サービスを運営する側にやさしい」クローリングをする場合、できるだけ自身の正しいUserAgentを指定し、かつメールや連絡先なども添えておくことをおすすめします。-->
 <!--つまり、ありのままの自分を見せます-->
+
+>>>
+
+## サービスへの意思表明
 
 - <p class="fragment fade-up">ありのままの自分を見せる</p>
 
@@ -326,16 +351,18 @@ I'm Kamo
 
 >>>
 
-## サーバへの負荷
+## 一気に取得しない
 
+<img src="./asset/dos_attack.png" class="fragment fade-in">
 <img src="./asset/computer_server_panku.png" class="fragment fade-in">
 <img src="./asset/dame_man.png" class="fragment fade-in">
 
-- <p class="fragment fade-up">サーバーに高負荷をかけない</p>
+<p class="fragment fade-up">攻撃、または負荷がかかっている勘違いさせない</p>
+
 <!--一気に持ってこようとしない-->
 <!--最後に、クローリングの際に、よく言われることが欲しい情報があっても一気に取ってこないことです-->
-<!--サービスを提供するサーバーに一気に高負荷をかけるとDDoS攻撃を受けていると勘違いさせてしまうので一件ずつ取ってきたら、時間をおいてまた取ってくるようにしましょう-->
-<!--これは先ほどクローリングの使用目的を説明するときにも触れましたが、APIがあってかつそのAPI内に必要な情報があればそれを積極的に使う理由と繋がります-->
+<!--サービスを提供するサーバーに一気に高負荷をかけるとDoS攻撃を受けていると勘違いさせてしまうので一件ずつ取ってきたら、時間をおいてまた取ってくるようにしましょう-->
+<!--これは先ほどクローリングの使用目的を説明するときにも触れましたが、APIがあってかつそのAPI内に必要な情報があればそれを積極的に使う理由にも繋がります-->
 <!--サイト側が指定したAPIには１時間で利用できるクローリングの回数とかどれくらいの間隔で持ってきたらいいのかとかの規約が指定されています-->
 <!--なので、APIを使いますとクローリングする側もサイトを運用している側もwin-winとなリますのでそちらがあればぜひ使いましょう。-->
 <!--ではAPIがない場合はどれくらいの時間をおきながら、持ってきたらいいのかについてですが、-->
@@ -370,9 +397,9 @@ I'm Kamo
 ## 情報解析
 
 <div>
-	<img src="./asset/bird_s300.png" class="fragment fade-in">
+	<img src="./asset/cloud.png" class="fragment fade-in">
 	<img src="./asset/migi_s300.png" class="fragment fade-in">
-	<img src="./asset/koukan_s300.png" class="fragment fade-in">
+	<img src="./asset/data_henkan.png" class="fragment fade-in">
 	<img src="./asset/migi_s300.png" class="fragment fade-in">
 	<img src="./asset/ai_search_s300.png" class="fragment fade-in">
 	<img src="./asset/migi_s300.png" class="fragment fade-in">
@@ -390,8 +417,7 @@ I'm Kamo
 
 >>>
 
-## 注意点１
-## 個人情報
+## 個人情報は取り出さない
 
 <!--一つは取り出す情報についてです-->
 <!--これはそのままの意味で、中に個人を特定できてしまうような情報が書かれていることはないか確認する必要があります。-->
@@ -405,9 +431,9 @@ I'm Kamo
 
 >>>
 
-## 注意点２
-## DOMツリー
-
+## DOMツリーのススメ
+- <p class="fragment fade-in">正規表現を使わなくていい</p>
+- <p class="fragment fade-in">コードが見やすくなる</p>
 <!--次に、もう一つは取り出す際の方法についてです-->
 <!--これはあとでも説明しますが、スクレイピングで苦労をしないための注意事項です。-->
 <!--守らなくてもいいですが、相当な労力を使います-->
@@ -415,7 +441,11 @@ I'm Kamo
 <!--理由はそのまま持ってきて使うと、正規表現で必要な部分を取り出すとかhtmlファイルを一行ずつ取ってくるとかの問題があるので処理も汚くなりますし、-->
 <!--PHPでさっと作ることが難しくなるからです。-->
 <!--ちなみに、DOMツリーはクロームのデベロッパーツールを開くとここでご確認できます。-->
+
+>>>
+
 <img src="./asset/dom.png" class="fragment fade-in">
+<img src="./asset/dom_tree.png" class="fragment fade-in">
 
 ---
 
@@ -485,11 +515,11 @@ I'm Kamo
 <!--これを意識して実際の一通りの流れをイメージで表しますと-->
 
 <div>
-	<img src="./asset/bird_s300.png" class="fragment fade-in">
+	<img src="./asset/cloud.png" class="fragment fade-in">
 	<img src="./asset/migi_s300.png" class="fragment fade-in">
 	<img src="./asset/ai_search_s300.png" class="fragment fade-in">
 	<img src="./asset/migi_m.png" class="fragment fade-in">
-	<img src="./asset/bird_m.png" class="fragment fade-in">
+	<img src="./asset/data_henkan_3.png" class="fragment fade-in">
 	<img src="./asset/migi_m.png" class="fragment fade-in">
 	<img src="./asset/paper_m.png" class="fragment fade-in">
 </div>
@@ -505,15 +535,15 @@ I'm Kamo
 
 ## メインの問題
 
-<p class="fragment fade-in"> DOMツリーで取得できない(ように見えた)</p>
-<p class="fragment fade-in"> サービス側からメール </p>
-<p class="fragment fade-in"> crontabの設定 </p>
+<p class="fragment fade-in"> <font color="Pink">DOMツリーで取得できない</font>(ように見えた)</p>
+<p class="fragment fade-in"> <font color="Pink">サービス側からメール</font> </p>
+<p class="fragment fade-in"> <font color="Pink">crontab</font>の設定 </p>
 
 <!--一個目は、DOMツリーで取得する際のライブラリーがちゃんと動いていないように見えて取得できるまで遠回りをしたことです。-->
 <!--これは単に私のミスで起きたことなのでその失敗談と得られた経験についてお話します-->
 
 <!--次は、スクレイピングする前にお問い合わせをした結果のことです-->
-<!--実は今日の話をする際にソースコードを見せながら説明しようと思っていましたが、-->
+<!--実は今日の話をする際にソースコードを見せながら説明しようと思っ	ていましたが、-->
 <!--某プログラミングナレッジのコミュニティからお叱りをいただいたので、今日まで間に合いませんでした！すみません！-->
 
 <!--最後に定期実行するのにコマンド上でうまくいかない問題があったことです-->
@@ -548,6 +578,12 @@ I'm Kamo
 しかし、必要な情報を取ってくるには正規表現での工夫が求められた。
 また、一行のバイト数が多すぎて取れないところもあった。 -->
 
+>>>
+
+# 結論
+
+<h2 class="fragment fade-in"><font color='Gold'>DOMツリーで取ると便利！</font></h2>
+
 ---
 
 ## これに至るまで学んだこと
@@ -569,9 +605,9 @@ I'm Kamo
 
 >>>
 
-# 結論
-
-<h2 class="fragment fade-in"><font color='Gold'>DOMツリーで取得！</font></h2>
+<h3>持ってくるだけなら<font color='Gold'>curl</font>で</h3>
+<img src="./asset/curl_s.png" class="fragment fade-in">
+<p class="fragment fade-in">動作速度が早い</p>
 
 ---
 
