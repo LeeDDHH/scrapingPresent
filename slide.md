@@ -394,29 +394,6 @@ I'm Kamo
 
 >>>
 
-## 情報解析
-
-<div>
-	<img src="./asset/cloud.png" class="fragment fade-in">
-	<img src="./asset/migi_s300.png" class="fragment fade-in">
-	<img src="./asset/data_henkan.png" class="fragment fade-in">
-	<img src="./asset/migi_s300.png" class="fragment fade-in">
-	<img src="./asset/ai_search_s300.png" class="fragment fade-in">
-	<img src="./asset/migi_s300.png" class="fragment fade-in">
-	<img src="./asset/paper_m.png" class="fragment fade-in">
-</div>
-
-<!--ここでもう一度情報解析について触れていきますと、-->
-<!--そもそも自分は「情報解析」という言葉がピンと来なかったです。-->
-<!--そこで調べて見ると情報解析とは、「情報の構成要素を細かく理論的に調べることによって、その本質を明らかにすること」を指します-->
-<!--これはイメージ的には、クローリングした情報を必要なデータ形式に変換し、その構造を「解析」してから、必要なデータを選定することです。-->
-<!--この情報解析で得た情報はパブリックな場で公開せず、個人で利用するのであれば、取得した情報をスクレイピングすること自体、セーフです。-->
-<!--ただし、クローリングのときにも触れたように、収集元のデータの所有者の意向次第では、すでに収集したデータも含め、削除しないといけない場合がありますので今まで集めた情報が消えるリスクは十分あります-->
-
-<!--概ね、この情報解析を守っていれば、そんなに気にすることはないかと思いますが、解析する際は次の2点だけ注意しましょう。-->
-
->>>
-
 ## 個人情報は取り出さない
 
 <!--一つは取り出す情報についてです-->
